@@ -3,7 +3,7 @@
  * @Author: 辛顺宁
  * @Date: 2019-09-25 18:19:33
  * @LastEditors: 辛顺宁
- * @LastEditTime: 2019-09-25 18:31:00
+ * @LastEditTime: 2019-09-26 09:21:01
  */
 
 /**
@@ -11,18 +11,27 @@
  * @return {boolean}
  */
 var isValid = function (s) {
-  if (s.length < 2) return false
-  let l = [], r = []
+  if (s.length % 2 != 0) return false
+  let arr = []
   s = s.split('')
+  let map = {
+    '}': '{',
+    ']': '[',
+    ')': '(',
+  }
   s.forEach(i => {
     if (i == '(' || i == '[' || i == '{') {
-      l.push(i)
+      arr.push(i)
     } else {
-      r.push(r)
+      if (map[i] == arr[arr.length - 1]) {
+        arr.pop()
+      } else {
+        return false
+      }
     }
   })
-  r = r.reverse()
-  for (let i = 0; i < l.length; i++) {
-
+  if (arr.length == 0) {
+    return true
   }
+  return false
 };
