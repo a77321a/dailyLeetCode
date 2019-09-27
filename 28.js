@@ -5,7 +5,7 @@
  * @Author: 辛顺宁
  * @Date: 2019-09-26 11:38:32
  * @LastEditors: 辛顺宁
- * @LastEditTime: 2019-09-26 11:38:48
+ * @LastEditTime: 2019-09-26 14:11:54
  */
 
 
@@ -20,4 +20,7 @@ var strStr = function (haystack, needle) {
   haystack = haystack.split('')
   needle = needle.split('')
   let len = needle.length
+  for (let i = 0; i < haystack.length; i++) {
+
+  }
 };
