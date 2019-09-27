@@ -5,7 +5,7 @@
  * @Author: 辛顺宁
  * @Date: 2019-09-26 11:38:32
  * @LastEditors: 辛顺宁
- * @LastEditTime: 2019-09-26 14:11:54
+ * @LastEditTime: 2019-09-27 17:13:51
  */
 
 
@@ -16,11 +16,22 @@
  * @return {number}
  */
 var strStr = function (haystack, needle) {
-  if (needle == '') return 0
-  haystack = haystack.split('')
-  needle = needle.split('')
-  let len = needle.length
-  for (let i = 0; i < haystack.length; i++) {
-
+  if (needle == haystack) return 0
+  if (needle.length > haystack.length) return -1
+  if (needle == "") return 0
+  let arr = haystack.split(needle)
+  if (arr.length == 1)
+    return -1
+  else if (arr[0] == '') {
+    return 0
+  }
+  else if (arr[arr.length - 1] == '') {
+    let num = 0
+    arr.forEach(i => {
+      num = num + i.length
+    })
+    return num
+  } else {
+    return arr[0].length
   }
 };
