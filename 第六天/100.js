@@ -5,7 +5,7 @@
  *  
  * @Date: 2019-09-29 11:06:20
  * @LastEditors: 辛顺宁
- * @LastEditTime: 2019-09-29 11:11:24
+ * @LastEditTime: 2019-09-29 14:36:28
  */
 /**
  * Definition for a binary tree node.
@@ -17,8 +17,10 @@
 /**
  * @param {TreeNode} p
  * @param {TreeNode} q
- * @return {boolean}
+ * @return {boolean} 
+ * 首先判断两棵树存不存在 如果都存在且val相等 再比较两颗树的左右节点遍历
  */
+
 var isSameTree = function (p, q) {
   if (p.val != q.val) return false
   if (p == null && q == null) return true

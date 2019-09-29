@@ -3,7 +3,7 @@
  * @Author: 辛顺宁
  * @Date: 2019-09-29 09:40:17
  * @LastEditors: 辛顺宁
- * @LastEditTime: 2019-09-29 09:43:34
+ * @LastEditTime: 2019-09-29 14:38:09
  */
 /**
  * Definition for singly-linked list.
@@ -15,6 +15,9 @@
 /**
  * @param {ListNode} head
  * @return {ListNode}
+ * 判断节点或下一个节点存不存在
+ * 如果此节点值等于下一个节点值 把下一个节点的next指针挂载到当前节点
+ *  
  */
 var deleteDuplicates = function (head) {
   if (!head || !head.next) return head

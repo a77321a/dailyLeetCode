@@ -6,7 +6,7 @@
  * @Author: 辛顺宁
  * @Date: 2019-09-29 09:48:03
  * @LastEditors: 辛顺宁
- * @LastEditTime: 2019-09-29 11:04:15
+ * @LastEditTime: 2019-09-29 14:39:39
  */
 /**
  * @param {number[]} nums1
@@ -14,6 +14,8 @@
  * @param {number[]} nums2
  * @param {number} n
  * @return {void} Do not return anything, modify nums1 in-place instead.
+ * 首先暴力硬解 把nums1数组后面的内容替换为nums2 然后排序
+ * 
  */
 var merge = function (nums1, m, nums2, n) {
   for (let i = 0; i < n; i++) {
