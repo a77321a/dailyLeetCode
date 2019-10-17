@@ -13,8 +13,8 @@
  * @return {boolean}
  */
 var containsNearbyDuplicate = function (nums, k) {
-  for (let i = 0; i < nums.length; i++) {
-    for (let j = 1; j < nums.length; j++) {
+  for (let i = 1; i < nums.length; i++) {
+    for (let j = 0; j < i; j++) {
       if (nums[i] == nums[j]) {
         if (Math.abs(i - j) <= k) {
           return true
@@ -24,4 +24,4 @@ var containsNearbyDuplicate = function (nums, k) {
   }
   return false
 };
-containsNearbyDuplicate([1, 2, 3, 1])
+containsNearbyDuplicate([1,2,3,1,2,3])
