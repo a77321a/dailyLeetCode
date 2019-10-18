@@ -3,7 +3,7 @@
  * @Author: 辛顺宁
  * @Date: 2019-10-17 17:37:07
  * @LastEditors: 辛顺宁
- * @LastEditTime: 2019-10-17 17:39:37
+ * @LastEditTime: 2019-10-18 18:31:50
  */
 /**
  * @param {number[]} nums1
@@ -20,7 +20,7 @@ var intersection = function (nums1, nums2) {
       }
     }
   }
-
+  dw
   return [...new Set(arr)]
 };
 intersection([1, 2, 2, 1], [2, 2])
