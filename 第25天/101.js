@@ -3,7 +3,7 @@
  * @Author: 
  * @Date: 2019-11-20 16:34:49
  * @LastEditors: 
- * @LastEditTime: 2019-11-20 18:30:29
+ * @LastEditTime: 2019-11-20 18:31:31
  */
 /**
  * Definition for a binary tree node.
@@ -23,7 +23,7 @@ var isSymmetric = function (root) {
     if (!left || !right)//有一个为NULL
       return false;
     if (left.val == right.val)
-      return res(left.left, right.right) && ismirror(left.right, right.left);
+      return res(left.left, right.right) && res(left.right, right.left);
     return false;
   }
   return res()
