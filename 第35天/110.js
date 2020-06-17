@@ -3,7 +3,7 @@
  * @Author: 
  * @Date: 2020-03-18 17:33:44
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-03-18 17:59:49
+ * @LastEditTime: 2020-03-18 18:13:25
  */
 //
 var transArr = (arr) => {
@@ -50,8 +50,7 @@ function get (arr) {
     nextItem = ++item;
     result.push(subArr);
   }
-  console.log(result)
-  return result;
+  let newRes = result.map(i => i.join(''))
+  console.log(newRes)
 }
-transArr([1, 2, 3, 4, 6, 8, 9, 11, 12, 14, 15, 18, 19, 20, 5])
-get([1, 2, 3, 4, 6, 8, 9, 11, 12, 14, 15, 18, 19, 20, 5])
+get([1, 2, 3, 4, 6, 8, 9, 11, 12, 14, 15, 18, 19, 20])
