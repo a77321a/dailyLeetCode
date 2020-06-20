@@ -3,7 +3,7 @@
  * @Author:
  * @Date: 2020-06-18 15:56:05
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-06-19 09:09:25
+ * @LastEditTime: 2020-06-19 16:18:06
  */
 function TreeNode (val) {
   this.val = val;
@@ -25,8 +25,10 @@ var recoverFromPreorder = function (S) {
     // 是数字的时候
     if (S[i] != '-') {
       tempNum += S[i]
-      //结束数字的第一个 - 
-    } else if (S[i - 1] != '-') {
+
+    }
+    //结束数字的第一个 - 
+    else if (S[i - 1] != '-') {
       if (res[countLine]) {
         res[countLine].push(new TreeNode(tempNum))
         // 判断当前横线数与上一个横线数 
