@@ -8,7 +8,7 @@
  * @Author: a77321a
  * @Date: 2020-06-22 10:37:58
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-06-22 13:50:41
+ * @LastEditTime: 2020-06-22 14:40:06
  */
 /**
  * @param {string} pattern
@@ -18,15 +18,21 @@
 var patternMatching = function (pattern, value) {
   if (!pattern || pattern.length == 1 || pattern.length == 2) return true
   // flag 存在于第一个字母不同的字母
-  let firstword = pattern[0], flag = 0, flagIndex = 1
+  let firstword = pattern[0], flag = 0, firstCount = 0, flagIndex = 1, firstIndex = 1
+  // 假如第一个是a ,找到第一个b,和下一个a第一次出现
   for (let i = 1; i < pattern.length; i++) {
     if (pattern[i] != pattern[0]) {
       if (flag == 0) flagIndex = i
       flag++
+    } else {
+      if (firstCount == 0) firstIndex = i
+      firstCount++
     }
   }
   if (flag < 2) return true
+  for (let i = 1; i < value.length; i++) {
 
+  }
 };
 
-patternMatching("abba", "dogcatcatdog")
+patternMatching("abaa", "dogcatdogdog")
