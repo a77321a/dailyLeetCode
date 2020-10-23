@@ -3,7 +3,7 @@
  * @Author: a77321a
  * @Date: 2020-10-21 11:33:53
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-10-21 15:54:44
+ * @LastEditTime: 2020-10-21 16:27:30
  */
 /**
  * @param {string} name
@@ -42,4 +42,4 @@ var isLongPressedName = function (name, typed) {
   return true
 };
 
-isLongPressedName('alex', 'aaleelx')
+isLongPressedName('alex', 'aaleexr')
