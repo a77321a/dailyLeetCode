@@ -5,14 +5,14 @@
  * @Author: a77321a
  * @Date: 2020-10-26 16:32:22
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-10-26 16:52:17
+ * @LastEditTime: 2020-10-26 17:59:27
  */
 /**
  * @param {number[]} nums
  * @return {number[]}
  */
 var smallerNumbersThanCurrent = function (nums) {
-  let n = nums.length
+  let len = nums.length
   let max = Math.max(...nums)          // 找到最大值
   let counts = Array(max + 1).fill(0)  // 根据最大值生成0 - max的数组, 用于记录数字出现的次数
   nums.forEach(t => counts[t]++)       // 统计nums中数组出现次数
@@ -24,9 +24,4 @@ var smallerNumbersThanCurrent = function (nums) {
   }
   return nums.map(t => obj[t])
 };
-
-作者：shetia
-链接：https://leetcode-cn.com/problems/how-many-numbers-are-smaller-than-the-current-number/solution/xiao-yu-dang-qian-shu-zi-de-shu-by-shetia/
-来源：力扣（LeetCode）
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 smallerNumbersThanCurrent([8, 1, 2, 2, 3])
